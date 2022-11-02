@@ -11,8 +11,12 @@ const dataParsed = data.map(d => {
 console.log(dataParsed)
 
 const dotChart = Plot.dot(dataParsed, {
-    x: "timestamp", 
-    y: "duration"
+    y: "timestamp", 
+    x: "duration",
+    fill: "path",
+    r: 4,
+    opacity: 0.5,
+    title: "timestamp"
 }).plot()
 
 d3.select("#chart").append(() => dotChart)
